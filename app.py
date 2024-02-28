@@ -17,10 +17,7 @@ if start_button:
 st.write('It is not a functional application yet. Under construction.')
 
 import scipy.stats
-import streamlit as st
 import time
-
-st.header('Tossing a Coin')
 
 chart = st.line_chart([0.5])
 
@@ -42,11 +39,6 @@ def toss_coin(n):
 
     return mean
 
-number_of_trials = st.slider('Number of trials?', 1, 1000, 10)
-start_button = st.button('Run')
-
 if start_button:
     st.write(f'Running the experient of {number_of_trials} trials.')
     mean = toss_coin(number_of_trials)
-
-
